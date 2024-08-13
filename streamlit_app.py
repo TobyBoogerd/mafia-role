@@ -41,5 +41,4 @@ if st.button("Reset Game"):
 # Add footer
 st.markdown("---")
 st.markdown("**Developer: Toby Boogerd**")
-st.markdown("_#Developed by Toby Boogerd_")
 
