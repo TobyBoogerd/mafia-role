@@ -10,6 +10,10 @@ def initialize_roles(num_players):
         st.session_state.roles = ["Sheriff", "Doctor", "Mafia", "Mafia", "Villager"]
     elif num_players == 6:
         st.session_state.roles = ["Sheriff", "Doctor", "Mafia", "Mafia", "Villager", "Villager"]
+    elif num_players == 7:
+        st.session_state.roles = ["Sheriff", "Doctor", "Mafia", "Mafia", "Villager", "Villager", "Villager"]
+    elif num_players == 8:
+        st.session_state.roles = ["Sheriff", "Doctor", "Mafia", "Mafia", "Villager", "Villager", "Villager","Doctor"]
     st.session_state.selected_role = None
 
 # Initialize roles if not already done
@@ -21,7 +25,7 @@ if 'roles' not in st.session_state:
 st.title("Mafia Role Picker")
 
 # Input for the number of players
-num_players = st.number_input("Enter the number of players (4-6):", min_value=4, max_value=6, value=st.session_state.num_players)
+num_players = st.number_input("Enter the number of players (4-8):", min_value=4, max_value=8, value=st.session_state.num_players)
 
 # Update roles if the number of players changes
 if num_players != st.session_state.num_players:
@@ -41,7 +45,7 @@ role_display = st.empty()
 
 if st.session_state.selected_role:
     role_display.write(f"You picked: **{st.session_state.selected_role}**")
-    time.sleep(2)
+    time.sleep(1.5)
     st.session_state.selected_role = None
     role_display.empty()  # Clear the display
 
