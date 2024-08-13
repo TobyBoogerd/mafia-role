@@ -1,4 +1,5 @@
-#imports
+#Developed by Toby Boogerd
+
 import streamlit as st
 import random
 import time
