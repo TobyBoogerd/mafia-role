@@ -38,3 +38,8 @@ if st.button("Reset Game"):
     initialize_roles()
     st.write("The game has been reset!")
 
+# Add footer
+st.markdown("---")
+st.markdown("**Developer: Toby Boogerd**")
+st.markdown("_#Developed by Toby Boogerd_")
+
